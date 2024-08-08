@@ -1,7 +1,5 @@
 headers = {
-    "Content-Type": "application/json",
-    "authToken": "jknnFApafP4awfAIFfafam2fma",
-    "Autorization": "Bearer {authToken}"
+    "Content-Type": "application/json"
 }
 
 user_body = {
