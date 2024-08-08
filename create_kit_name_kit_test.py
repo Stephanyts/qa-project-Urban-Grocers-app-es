@@ -29,6 +29,7 @@ def negative_assert_symbol(kit_name):
     # Comprueba que el atributo code en el cuerpo de respuesta es 400
     assert kit_response.json()["code"] == 400
 
+# Prueba 1. Kit creado con éxito. El parámetro name contiene 1 caracteres
 def test_create_kit_1_letter_in_name_get_success_response():
     positive_assert("a")
 
@@ -61,6 +62,8 @@ def test_create_kit_white_space_get_success_response():
 # Prueba 7. El parámetro name contiene un string de dígitos
 def test_create_kit_numbers_allowed_get_success_response():
     positive_assert("123")
+
+# Prueba 8. Error. Falta el parametro name en la solicitud
 def negative_assert_no_name_error_response():
     # El diccionario con el cuerpo de la solicitud se copia del archivo "data" a la variable "user_body"
     kit_body = data.kit_body.copy()
